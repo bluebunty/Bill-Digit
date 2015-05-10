@@ -1,0 +1,98 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.sd.billmanager.MainActivity" >
+
+    <LinearLayout
+        android:id="@+id/topLayout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:weightSum="1"
+        android:layout_above="@+id/bottomLayout"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnAddBill"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_gravity="center"
+            android:textSize="20sp"
+            android:textColor="@android:color/white"
+            android:background="@drawable/getborder"
+            android:drawableTop="@drawable/allnew"
+            android:text="Add Bill"
+            />
+
+        <Button
+            android:id="@+id/btnWarranty"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:layout_marginLeft="5dp"
+            android:textSize="20sp"
+            android:textColor="@android:color/white"
+            android:background="@drawable/getborder"
+            android:drawableTop="@drawable/w"
+            android:text="Warranty"
+            />
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/bottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:weightSum="1"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnuser"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:textSize="20sp"
+            android:textColor="@android:color/white"
+            android:background="@drawable/getborder"
+            android:drawableTop="@drawable/alll"
+            android:text="All Bills"
+            android:width="0dp" />
+
+        <Button
+            android:id="@+id/btnUtility"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:layout_marginLeft="5dp"
+            android:textSize="20sp"
+            android:textColor="@android:color/white"
+            android:background="@drawable/getborder"
+            android:drawableTop="@drawable/util"
+            android:text="Utilities"
+            android:width="0dp" />
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/chronicle"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="55dp"/>
+
+</RelativeLayout>

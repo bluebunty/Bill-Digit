@@ -1,0 +1,146 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/blue">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Bill"
+            android:textSize="22sp"
+            android:textColor="@android:color/white"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_below="@+id/header"
+        android:layout_above="@+id/addPair"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+         >
+        <LinearLayout
+           android:id="@+id/topLayout"
+               android:layout_width="match_parent"
+               android:layout_height="150dp"
+               android:layout_marginLeft="5dp"
+               android:layout_marginRight="5dp"
+               android:layout_marginTop="10dp"
+               android:weightSum="1"
+               android:layout_above="@+id/bottomLayout"
+               android:orientation="horizontal">
+               <RelativeLayout
+                   android:id="@+id/btnBillPhoto"
+                   android:layout_width="0dp"
+                   android:layout_height="match_parent"
+                   android:layout_weight=".5"
+                   android:gravity="center_vertical|center_horizontal"
+                   android:layout_gravity="center">
+                   <ImageView
+                       android:src="@drawable/choose_image_default"
+                       android:id="@+id/image_bill"
+                       android:layout_width="fill_parent"
+                       android:layout_height="150dp" />
+                   <TextView
+                       android:layout_alignBottom="@+id/image_bill"
+                       android:layout_width="fill_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_gravity="center_horizontal"
+                       android:textSize="12sp"
+                       android:background="@null"
+                       android:text="Add bill photo"
+                       android:gravity="center_horizontal"
+                       android:alpha=".85"
+                        />
+               </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/btnItemPhoto"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".5"
+                android:gravity="center_vertical|center_horizontal"
+                android:layout_gravity="center">
+                <ImageView
+                    android:src="@drawable/choose_image_default"
+                    android:id="@+id/image_item"
+                    android:layout_width="fill_parent"
+                    android:layout_height="150dp" />
+                <TextView
+                    android:layout_alignBottom="@+id/image_item"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="12sp"
+                    android:background="@null"
+                    android:text="Add item photo"
+                    android:gravity="center_horizontal"
+                    android:alpha=".85"
+                    />
+            </RelativeLayout>
+
+
+
+           </LinearLayout>
+
+         <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp"
+            >
+
+            <EditText
+                android:id="@+id/hashTag"
+                android:singleLine="true"
+                android:hint="enter hash tag"
+                android:gravity="center_horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <ScrollView
+            android:clipToPadding="false"
+            android:id="@+id/recyclerview_added_items"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:scrollbars="none"
+            >
+            <LinearLayout
+                android:id="@+id/itemLinearView"
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+            </LinearLayout>
+            </ScrollView>
+    </LinearLayout>
+    <TextView
+        android:layout_above="@+id/btnSave"
+        android:id="@+id/addPair"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:gravity="center"
+        android:text="Add more"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="#e3e3e3"
+        android:textSize="19sp"/>
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:gravity="center"
+        android:text="Save"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@color/blue"/>
+</RelativeLayout>
